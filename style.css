@@ -1,0 +1,507 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #2683eb;
+  color: black;
+  padding: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.logo {
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: "Courier New", Courier, monospace;
+}
+ul {
+  display: flex;
+  color: black;
+  gap: 20px;
+  list-style: none;
+}
+li a {
+  list-style: none;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to bottom, #2683eb, #66640f);
+  height: 60vh;
+  padding-bottom: 200px;
+}
+.hero .text {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero h1 {
+  font-size: 60px;
+  text-align: center;
+}
+.button {
+  display: flex;
+  gap: 15px;
+}
+.button button {
+  padding: 7px 15px;
+  background-color: black;
+  color: white;
+}
+.hero-image {
+  position: relative;
+  bottom: 250px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.para-1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: auto;
+  width: 500px;
+  margin-bottom: 50px;
+}
+.energy {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  justify-content: center;
+}
+.energy-text {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.energy img {
+  width: 800px;
+}
+#button {
+  padding: 10px 15px;
+  background-color: black;
+  color: white;
+  width: fit-content;
+  font-size: 20px;
+  font-weight: bold;
+  height: 4px;
+  padding-bottom: 30px;
+}
+.design {
+  background-color: rgb(238, 213, 181);
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.us {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.us div {
+  width: 360px;
+  padding: 40px;
+  padding-right: 120px;
+  height: 200px;
+  background-color: white;
+  border-radius: 20px;
+}
+.design h1 {
+  font-size: 60px;
+
+  text-align: center;
+}
+.study {
+  display: flex;
+  gap: 30px;
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+}
+.study div {
+  width: 500px;
+  background-color: #f6f8fb;
+}
+.study img {
+  width: 600px;
+}
+.journal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+.journal h1 {
+  font-size: 60px;
+  border-bottom: 1px solid gray;
+  width: 1050px;
+  text-align: center;
+  padding-bottom: 15px;
+}
+.card {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid gray;
+  padding: 10px 3px;
+}
+.card img {
+  width: 300px;
+}
+.card h3 {
+  font-size: 40px;
+}
+p {
+  display: flex;
+  gap: 80px;
+}
+.sticker {
+  position: absolute;
+  top: 90px;
+  left: 130px;
+}
+.Williams {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding: 100px 0;
+}
+.Williams img {
+  width: 400px;
+}
+.Williams .w-text {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.goal {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+}
+footer img {
+  width: 100%;
+}
+li a {
+  position: relative;
+}
+
+li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: black;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+li a:hover::after {
+  width: 100%;
+}
+.button button:hover,
+#button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.us div:hover,
+.card:hover,
+.role:hover {
+  transform: translateY(-8px);
+}
+
+.energy img:hover,
+.study img:hover,
+.Williams img:hover,
+.hero-image img:hover {
+  transform: scale(1.03);
+}
+tr:hover {
+  background-color: #f5f5f5;
+}
+.hero,
+.energy,
+.design,
+.study,
+.journal,
+.Williams,
+.goal {
+  animation: fadeUp 0.8s ease;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px;
+  }
+
+  ul {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #2683eb;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    display: none;
+  }
+
+  ul.active {
+    display: flex;
+  }
+
+  /* hamburger icon */
+  .menu-toggle {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .hero {
+    height: auto;
+    padding: 40px 15px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero-image {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .hero-image img {
+    width: 100%;
+  }
+
+  .para-1 {
+    width: 100%;
+    font-size: 18px;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .energy {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .energy img {
+    width: 100%;
+  }
+
+  .design {
+    height: auto;
+    padding: 40px 15px;
+  }
+
+  .us {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .us div {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+  }
+
+  .study {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+
+  .study div {
+    width: 100%;
+  }
+
+  .study img {
+    width: 100%;
+  }
+
+  .journal h1 {
+    width: 100%;
+    font-size: 32px;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .Williams {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 15px;
+    text-align: center;
+  }
+
+  .Williams img {
+    width: 100%;
+  }
+
+  .Williams .w-text {
+    width: 100%;
+  }
+
+  p {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sticker {
+    position: static;
+  }
+
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  padding-bottom: 80px; 
+}
+
+#button {
+  height: auto; 
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 15px 20px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  ul {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background: #2683eb;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    display: none;
+  }
+  #menu-toggle:checked + .menu-icon + ul {
+    display: flex;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .design h1,
+  .journal h1 {
+    font-size: 32px;
+    width: 100%;
+  }
+
+  .card h3 {
+    font-size: 24px;
+  }
+
+  .para-1 {
+    font-size: 18px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  li a {
+    font-size: 18px;
+  }
+
+  .energy img,
+  .study img,
+  .Williams img {
+    width: 100%;
+  }
+
+  .study div,
+  .Williams .w-text {
+    width: 100%;
+  }
+
+  .energy,
+  .study,
+  .Williams {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .design {
+    height: auto;
+    padding: 40px 15px;
+  }
+
+  .study {
+    height: auto;
+  }
+
+  .goal {
+    height: auto;
+    padding: 30px 10px;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  p {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+}
